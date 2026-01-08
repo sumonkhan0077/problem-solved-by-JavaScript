@@ -24,3 +24,144 @@ for(let letter of word) {
        }
 }
 console.log(vowelsNumbers)
+
+
+
+// Problem 3: Check for Palindrome
+// Write a function that checks if a string is a palindrome (reads the same forward and backward).
+// Example:
+// Input: "madam"
+// Output: true
+// Input: "hello"
+// Output: false
+
+let palindromeWord = "madam";
+
+let reverseWord = palindromeWord.split('').reverse().join('');
+if(palindromeWord === reverseWord){
+    console.log(true)
+}
+else{
+    console.log(false)
+}
+
+
+
+// Problem 4: Find the Maximum Number
+// Write a function that takes an array of numbers and returns the largest number.
+// Example:
+// Input: [5, 1, 9, 3]
+// Output: 9
+const arrayNum =[5, 1, 9, 3];
+let maxNumber = arrayNum[0];
+
+for(let num of arrayNum) {
+    if(num > maxNumber) {
+        maxNumber = num;
+    }
+}
+console.log(maxNumber)
+
+
+
+// Problem 5: Remove Duplicates from an Array
+// Write a function that removes all duplicate numbers from an array.
+// Example:
+// Input: [1, 2, 2, 3, 4, 4, 1]
+// Output: [1, 2, 3, 4]
+const numbers = [1, 2, 2, 3, 4, 4, 1];
+let singelNumbers =[];
+for(let number of numbers) {
+    if(!singelNumbers.includes(number)) {
+        singelNumbers.push(number)
+        // singelNumbers = [...singelNumbers, number]
+    }
+}
+console.log(singelNumbers)
+
+
+// Problem 6: Sum of All Numbers in an Array
+// Write a function that returns the sum of all numbers in an array.
+// Example:
+// Input: [1, 2, 3, 4]
+// Output: 10
+const sumNumber = [1, 2, 3, 4,]
+let sum=0;
+for(let num of sumNumber) {
+        sum= sum + num;
+}
+console.log(sum)
+
+
+// Problem 7: Find Even Numbers in an Array
+// Write a function that returns all even numbers from a given array.
+// Example:
+// Input: [1, 2, 3, 4, 5, 6]
+// Output: [2, 4, 6]
+const numbers = [1, 2, 3, 4, 5, 6];
+let evenNumbers = [];
+for (let num of numbers) {
+  num % 2 === 0 && evenNumbers.push(num);
+}
+console.log(evenNumbers);
+
+
+
+// Problem 8: Capitalize First Letter of Each Word
+// Write a function that capitalizes the first letter of each word in a string.
+// Example:
+// Input: "hello world"
+// Output: "Hello World"
+
+const sentence = "hello world hi";
+let capiSen = "";
+
+const sem = sentence.split(" ")
+for(let se of sem ) {
+    capiSen += se[0].toUpperCase() + se.slice(1) + " ";
+}
+console.log(capiSen)
+
+
+
+// Problem 9: Find the Factorial of a Number
+// Write a function that calculates the factorial of a number using a loop.
+// Example:
+// Input: 5
+// Output: 120
+
+const number = 5;
+let result = 1;
+for (let i = 1; i <= number; i++  ){
+       result= result * i ;
+}
+console.log(result)
+
+
+
+// Problem 10: PingPong Challenge
+// Write a function that prints numbers from 1 to 20.
+// Example:
+// For multiples of 3, print "Ping"
+// For multiples of 5, print "Pong"
+// For multiples of both 3 and 5, print "PingPong"
+// If the number is not a multiple of 3 or 5, print the number itself
+// Example Output:
+// 1, 2, Ping, 4, Pong, Ping, 7, 8, Ping, Pong, 11, Ping, 13, 14, PingPong, 16 …..
+
+function PingPong(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("PingPong");
+    } else if (i % 3 === 0) {
+      console.log("Ping");
+    } else if (i % 5 === 0) {
+      console.log("Pong");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+const num = 40;
+PingPong(num);
