@@ -165,3 +165,29 @@ function PingPong(num) {
 
 const num = 40;
 PingPong(num);
+
+// usestate ar funtion 
+
+function UseState(initialValue) {
+  let state = initialValue;
+
+  function setState(newValue) {
+    state = newValue;
+    render(); 
+  }
+
+  function getState() {
+    return state;
+  }
+
+  return [getState, setState];
+}
+
+function render() {
+  console.log("Count:", count());
+}
+
+const [count, setCount] = UseState(0);
+
+render();        // Count: 0
+setCount(1);     // Count: 1
