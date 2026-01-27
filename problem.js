@@ -12,27 +12,28 @@
 // console.log(result)
 // console.log(b)
 
-function UseState(initialValue) {
-  let state = initialValue;
+// function UseState(initialValue) {
+//   let state = initialValue;
 
-  function setState(newValue) {
-    state = newValue;
-    render(); 
-  }
+//   function setState(newValue) {
+//     state = newValue;
+//     render(); 
+//   }
 
-  function getState() {
-    return state;
-  }
+//   function getState() {
+//     return state;
+//   }
 
-  return [getState, setState];
-}
+//   return [getState, setState];
+// }
 
-function render() {
-  console.log("Count:", count());
-}
+// function render() {
+//   console.log("Count:", count());
+// }
 
-const [count, setCount] = UseState(0);
+// const [count, setCount] = UseState(0);
 
-render();        // Count: 0
-setCount(1);     // Count: 1
-setCount(2);     // Count: 2
+// render();        // Count: 0
+// setCount(1);     // Count: 1
+// setCount(2);     // Count: 2
+

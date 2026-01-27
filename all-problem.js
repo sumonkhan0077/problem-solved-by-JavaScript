@@ -191,3 +191,23 @@ const [count, setCount] = UseState(0);
 
 render();        // Count: 0
 setCount(1);     // Count: 1
+
+
+
+
+// object add, show, delete 
+const user = {userName: "sumon", email:"sumonbd0077@gmail.com", password: 123456}
+
+let newUser = "fahim"
+// newUser = user.userName 
+user.userName = newUser
+delete user.password
+
+console.log(Object.values(user))
+console.log(user.userName)
+console.log(Object.keys(user))
+console.log(Object.entries(user));
+
+for (let value in user) {
+  console.log(user[value]);
+}
