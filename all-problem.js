@@ -194,7 +194,6 @@ setCount(1);     // Count: 1
 
 
 
-
 // object add, show, delete 
 const user = {userName: "sumon", email:"sumonbd0077@gmail.com", password: 123456}
 
@@ -211,3 +210,25 @@ console.log(Object.entries(user));
 for (let value in user) {
   console.log(user[value]);
 }
+
+
+// let text = "JavaScript is a powerful programming language";
+// sentence থেকে সবচেয়ে বড় (longest) word বের করো
+// যদি একাধিক word একই length এর হয় → প্রথমটা return করবে
+// word-এর length ও দেখাবে
+// Output:
+// Word: programming
+// Length: 11
+
+let text = "JavaScript is a powerful programming  language";
+
+let textslit = text.split(' ')
+let bigWord = '';
+let maxLength = 0;
+for (let tex of textslit) {
+    if(bigWord.length < tex.length) {
+      bigWord=tex
+      maxLength=tex.length
+    }
+}
+console.log(bigWord , maxLength) 
