@@ -274,3 +274,30 @@ if (price > 1000) {
 
 console.log("Total Price:",originalTotal)
 console.log("Final price:", totalPrice)
+
+
+
+
+// pass fail problem
+const students = [
+  { name: "Rahim", marks: 85 },
+  { name: "Karim", marks: 42 },
+  { name: "Jamal", marks: 73 },
+  { name: "Sakib", marks: 30 }
+];
+
+// average
+const totalMarks = students.reduce((sum, s) => sum + s.marks, 0);
+const average = totalMarks / students.length;
+
+// pass count
+const passCount = students.filter(s => s.marks >= 40).length;
+
+// fail names
+const failStudents = students
+  .filter(s => s.marks < 40)
+  .map(s => s.name);
+
+console.log("Average:", average);
+console.log("Pass:", passCount);
+console.log("Fail Students:", failStudents);
