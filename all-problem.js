@@ -301,3 +301,31 @@ const failStudents = students
 console.log("Average:", average);
 console.log("Pass:", passCount);
 console.log("Fail Students:", failStudents);
+
+
+
+const transactions = [
+  { type: "deposit", amount: 5000 },
+  { type: "withdraw", amount: 2000 },
+  { type: "deposit", amount: 3000 },
+  { type: "withdraw", amount: 1000 }
+];
+
+const totalDeposit = transactions
+  .filter(t => t.type === "deposit")
+  .reduce((sum, t) => sum + t.amount, 0);
+
+const totalWithdraw = transactions
+  .filter(t => t.type === "withdraw")
+  .reduce((sum, t) => sum + t.amount, 0);
+
+const balance = totalDeposit - totalWithdraw;
+
+console.log("Deposit:", totalDeposit);
+console.log("Withdraw:", totalWithdraw);
+
+if (balance < 0) {
+  console.log("Insufficient Balance");
+} else {
+  console.log("Balance:", balance);
+}
